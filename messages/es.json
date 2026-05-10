@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "title": "Datos a Escala Humana",
+    "description": "La geoespacial nativa de la nube hace que los datos climáticos globales funcionen para decisiones locales."
+  },
+  "topnav": {
+    "pilots": "Pilotos",
+    "initiatives": "Iniciativas",
+    "method": "Cómo funciona",
+    "collaborators": "Colaboradores",
+    "getInvolved": "Sumate"
+  },
+  "hero": {
+    "initiative": "una iniciativa de",
+    "org": "radiant earth",
+    "live": "Piloto activo",
+    "title": "datos, donde está la <em>gente</em>.",
+    "body": "Lo cloud-native geoespacial hace que los datos climáticos globales sirvan para decisiones locales. Lo construimos abierto, en público, con las ciudades que más lo necesitan.",
+    "ctaRead": "Ver los pilotos",
+    "ctaMethod": "Cómo funciona",
+    "credit": "foto · matías sánchez",
+    "caption": "barrio güemes, mirando al sur · 14:32"
+  },
+  "stats": {
+    "latest": "último",
+    "latestValue": "Pergamino · adoptado en PAC · 2025",
+    "inFlight": "en marcha",
+    "inFlightValue": "La Plata · inundación · 2026",
+    "writing": "escribiendo",
+    "writingValue": "Calor sensato · libro · 2026",
+    "code": "código",
+    "codeValue": "github.com/human-scale-data",
+    "contact": "contacto",
+    "contactValue": "hello@human-scale-data.org"
+  },
+  "practice": {
+    "label": "01 · qué · quién · por qué",
+    "title": "Una práctica, no una plataforma.",
+    "body": "Trabajamos junto a los equipos municipales para traducir datos abiertos globales en decisiones locales. El resultado es un análisis, un plan y código que cualquiera puede ejecutar — no una suscripción.",
+    "p1Meta": "qué hacemos",
+    "p1Title": "Análisis climáticos abiertos.",
+    "p1Body": "Calor, inundación, biodiversidad, crecimiento urbano — análisis hechos con los municipios, no para ellos. Código, datos y metodología abiertos por defecto.",
+    "p2Meta": "para quién",
+    "p2Title": "Equipos municipales que planifican.",
+    "p2Body": "Coordinadores de sustentabilidad, planificadores, analistas SIG en ciudades con riesgo urgente y presupuestos modestos — y las ONGs locales que los acompañan.",
+    "p3Meta": "por qué ahora",
+    "p3Title": "Las herramientas maduraron.",
+    "p3Body": "Lo cloud-native geoespacial permite que una ciudad chica realice análisis que antes requerían una agencia nacional. Traducimos esa realidad en práctica local."
+  },
+  "pilots": {
+    "label": "02 · pilotos",
+    "title": "Dónde trabajamos.",
+    "body": "Seis ciudades hasta ahora. Cada una un compromiso de un año: escuchar, construir, entregar abierto.",
+    "viewAll": "Ver todos los pilotos",
+    "open": "Abrir",
+    "soon": "Pronto"
+  },
+  "method": {
+    "label": "03 · método",
+    "title": "Cómo funciona.",
+    "body": "Cuatro fases, un año. Nos integramos con los equipos municipales, construimos herramientas abiertas, y dejamos capacidad.",
+    "s1Title": "Escuchar",
+    "s1Body": "Dos meses en territorio. Mapeamos stakeholders, caminamos los barrios, y entendemos qué decisiones los datos deben apoyar.",
+    "s2Title": "Construir",
+    "s2Body": "Cuatro meses co-creando. Jupyter notebooks, pipelines cloud, dashboards — todo open source, todo versionado, todo reproducible.",
+    "s3Title": "Probar",
+    "s3Body": "Dos meses piloteando. Usuarios reales, feedback real, iteración real. Arreglamos lo que se rompe.",
+    "s4Title": "Entregar",
+    "s4Body": "Cuatro meses capacitando. El equipo local opera el stack. Seguimos disponibles pero damos un paso atrás."
+  },
+  "initiatives": {
+    "label": "04 · iniciativas",
+    "title": "Más allá de pilotos.",
+    "body": "Programas de largo plazo que escalan aprendizajes a través de regiones y temas."
+  },
+  "collaborators": {
+    "label": "05 · colaboradores",
+    "title": "Con quiénes trabajamos.",
+    "body": "Nos asociamos con ciudades, instituciones de investigación y ONGs comprometidas con la acción climática abierta."
+  },
+  "cta": {
+    "title": "Nos encantaría <em>saber de vos</em>.",
+    "newsLabel": "Newsletter",
+    "newsBody": "Notas de campo mensuales de los pilotos. Sin spam, solo actualizaciones.",
+    "placeholder": "tu@email.com",
+    "subscribe": "Suscribirse",
+    "substackUrl": "Suscribirse en Substack →"
+  },
+  "footer": {
+    "work": "Trabajo",
+    "method": "Método",
+    "about": "Acerca de",
+    "languages": "Idiomas",
+    "pilots": "Pilotos",
+    "initiatives": "Iniciativas",
+    "howItWorks": "Cómo funciona",
+    "collaborators": "Colaboradores",
+    "mission": "Misión",
+    "team": "Equipo",
+    "contact": "Contacto",
+    "press": "Prensa",
+    "github": "GitHub",
+    "docs": "Documentación",
+    "datasets": "Datasets",
+    "english": "English",
+    "spanish": "Español",
+    "colophon": "Una iniciativa de Radiant Earth. En tipografía Plus Jakarta Sans y JetBrains Mono. Construido con Next.js."
+  },
+  "pilot": {
+    "backTo": "Pilotos",
+    "location": "Ubicación",
+    "partner": "Socio",
+    "duration": "Duración",
+    "status": "Estado",
+    "datasets": "Datasets",
+    "challenge": "El desafío",
+    "approach": "Nuestro enfoque",
+    "impact": "Impacto",
+    "tech": "Notas técnicas",
+    "cite": "Citar este piloto",
+    "nextPilot": "Siguiente piloto"
+  }
+}

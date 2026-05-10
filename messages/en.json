@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "title": "Human Scale Data",
+    "description": "Cloud-native geospatial makes global climate data work for local decisions."
+  },
+  "topnav": {
+    "pilots": "Pilots",
+    "initiatives": "Initiatives",
+    "method": "How it works",
+    "collaborators": "Collaborators",
+    "getInvolved": "Get involved"
+  },
+  "hero": {
+    "initiative": "an initiative of",
+    "org": "radiant earth",
+    "live": "Live pilot",
+    "title": "data, where the <em>people</em> are.",
+    "body": "Cloud-native geospatial makes global climate data work for local decisions. We build it open, in public, with the cities that need it most.",
+    "ctaRead": "Read the pilots",
+    "ctaMethod": "How it works",
+    "credit": "photo · matías sánchez",
+    "caption": "barrio güemes, looking south · 14:32"
+  },
+  "stats": {
+    "latest": "latest",
+    "latestValue": "Pergamino · CAP adopted · 2025",
+    "inFlight": "in flight",
+    "inFlightValue": "La Plata · flooding · 2026",
+    "writing": "writing",
+    "writingValue": "Sensible Heat · book · 2026",
+    "code": "code",
+    "codeValue": "github.com/human-scale-data",
+    "contact": "contact",
+    "contactValue": "hello@human-scale-data.org"
+  },
+  "practice": {
+    "label": "01 · what · who · why",
+    "title": "A practice, not a platform.",
+    "body": "We work alongside city teams to translate global open data into local decisions. The output is an analysis, a plan, and code anyone can rerun — not a subscription.",
+    "p1Meta": "what we make",
+    "p1Title": "Open climate analyses cities can act on.",
+    "p1Body": "Heat, flooding, biodiversity, urban growth — assessments produced with municipalities, not for them. Code, data, and methodology open by default.",
+    "p2Meta": "who it's for",
+    "p2Title": "Municipal staff who plan for the next storm.",
+    "p2Body": "Sustainability leads, planners, GIS analysts in cities with urgent risk and modest budgets — and the local NGOs who work alongside them.",
+    "p3Meta": "why now",
+    "p3Title": "Tools matured. Costs collapsed.",
+    "p3Body": "Cloud-native geospatial means a Pergamino-sized city can run analyses that used to require a national agency. We translate that reality into local practice."
+  },
+  "pilots": {
+    "label": "02 · pilots",
+    "title": "Where we've worked.",
+    "body": "Six cities so far. Each one a year-long engagement: listen, build, hand it over open.",
+    "viewAll": "View all pilots",
+    "open": "Open",
+    "soon": "Soon"
+  },
+  "method": {
+    "label": "03 · method",
+    "title": "How it works.",
+    "body": "Four phases, one year. We embed with city teams, build open tools, and leave capacity behind.",
+    "s1Title": "Listen",
+    "s1Body": "Two months on the ground. We map stakeholders, walk the neighborhoods, and understand what decisions the data needs to support.",
+    "s2Title": "Build",
+    "s2Body": "Four months co-creating. Jupyter notebooks, cloud pipelines, dashboards — all open source, all versioned, all reproducible.",
+    "s3Title": "Test",
+    "s3Body": "Two months piloting. Real users, real feedback, real iteration. We fix what breaks.",
+    "s4Title": "Hand over",
+    "s4Body": "Four months training. Local staff run the stack. We stay on call but step back."
+  },
+  "initiatives": {
+    "label": "04 · initiatives",
+    "title": "Beyond pilots.",
+    "body": "Longer-term programs that scale insights across regions and themes."
+  },
+  "collaborators": {
+    "label": "05 · collaborators",
+    "title": "Who we work with.",
+    "body": "We partner with cities, research institutions, and NGOs committed to open climate action."
+  },
+  "cta": {
+    "title": "We'd love to <em>hear from you</em>.",
+    "newsLabel": "Newsletter",
+    "newsBody": "Monthly field notes from the pilots. No spam, just updates.",
+    "placeholder": "your@email.com",
+    "subscribe": "Subscribe",
+    "substackUrl": "Subscribe on Substack →"
+  },
+  "footer": {
+    "work": "Work",
+    "method": "Method",
+    "about": "About",
+    "languages": "Languages",
+    "pilots": "Pilots",
+    "initiatives": "Initiatives",
+    "howItWorks": "How it works",
+    "collaborators": "Collaborators",
+    "mission": "Mission",
+    "team": "Team",
+    "contact": "Contact",
+    "press": "Press",
+    "github": "GitHub",
+    "docs": "Documentation",
+    "datasets": "Datasets",
+    "english": "English",
+    "spanish": "Español",
+    "colophon": "An initiative of Radiant Earth. Set in Plus Jakarta Sans and JetBrains Mono. Built with Next.js."
+  },
+  "pilot": {
+    "backTo": "Pilots",
+    "location": "Location",
+    "partner": "Partner",
+    "duration": "Duration",
+    "status": "Status",
+    "datasets": "Datasets",
+    "challenge": "The challenge",
+    "approach": "Our approach",
+    "impact": "Impact",
+    "tech": "Technical notes",
+    "cite": "Cite this pilot",
+    "nextPilot": "Next pilot"
+  }
+}
