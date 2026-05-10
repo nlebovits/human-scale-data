@@ -61,22 +61,14 @@ export function PilotImage({ image, className = '' }: PilotImageProps) {
           style={{ objectFit: 'cover' }}
         />
       </div>
-      {/* Attribution overlay */}
+      {/* Attribution overlay - uses span to avoid nested <a> inside card link */}
       {image.attribution && (
-        <div className="pilot-image-attribution">
-          {image.attributionUrl ? (
-            <a
-              href={image.attributionUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {image.attribution}
-            </a>
-          ) : (
-            <span>{image.attribution}</span>
-          )}
-        </div>
+        <span
+          className="pilot-image-attribution"
+          title={image.attributionUrl || undefined}
+        >
+          {image.attribution}
+        </span>
       )}
     </div>
   );
