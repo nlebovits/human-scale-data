@@ -747,13 +747,29 @@ p { margin: 0; }
 }
 .cs-card .row .open .arrow { transition: transform .2s; }
 .cs-card:hover .row .open .arrow { transform: translateX(4px); }
-.cs-card.upcoming { opacity: 0.55; pointer-events: none; }
-.cs-card.upcoming .thumb .swatch-bw,
-.cs-card.upcoming .thumb .swatch-color {
-  background: repeating-linear-gradient(45deg, var(--bg-deep) 0 8px, var(--bg) 8px 16px);
+/* Upcoming cards: dimmed but still interactive for hover effects */
+.cs-card.upcoming { opacity: 0.65; }
+.cs-card.upcoming .row .open { color: var(--muted); }
+
+/* Upcoming cards WITHOUT real images: show striped placeholder */
+.cs-card.upcoming .thumb > .swatch-bw,
+.cs-card.upcoming .thumb > .swatch-color {
+  background: repeating-linear-gradient(45deg, var(--bg-deep) 0 8px, var(--bg) 8px 16px) !important;
+  filter: none !important;
+}
+
+/* Upcoming cards WITH real images: preserve the image and animations */
+.cs-card.upcoming .pilot-image .swatch-bw,
+.cs-card.upcoming .pilot-image .swatch-color {
+  background: none !important;
+  filter: none !important;
+}
+.cs-card.upcoming .pilot-image .swatch-bw img {
+  filter: grayscale(1) contrast(1.1);
+}
+.cs-card.upcoming .pilot-image .swatch-color img {
   filter: none;
 }
-.cs-card.upcoming .row .open { color: var(--muted); }
 
 /* ─── Pilot images with real photos ─── */
 .pilot-image,
