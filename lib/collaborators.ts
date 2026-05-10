@@ -40,6 +40,16 @@ export const collaborators: Collaborator[] = [
     url: 'https://pergamino.ar',
   },
   {
+    name: 'Municipalidad de La Plata',
+    logo: '/collaborators/la-plata.png',
+    url: 'https://laplata.gob.ar',
+  },
+  {
+    name: 'Municipalidad de Villa del Rosario',
+    logo: '/collaborators/villa-del-rosario.svg',
+    url: 'https://villadelrosario.gob.ar',
+  },
+  {
     name: 'Municipalidad de Esperanza',
     logo: '/collaborators/esperanza.png',
     url: 'https://esperanza.gob.ar',
