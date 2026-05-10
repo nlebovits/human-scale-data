@@ -103,7 +103,7 @@ Federico Gazaba presented the methodology at the provincial "Decidir con datos" 
       country: 'Argentina',
       year: 2026,
     },
-    status: 'upcoming',
+    status: 'live',
     badge: 'in flight',
     title: 'When the river rises.',
     subtitle: 'Pluvial flooding & informal settlement exposure',

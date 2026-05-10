@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 
@@ -10,6 +11,7 @@ const initiatives = [
     body: 'Making informal settlements visible in official data through building footprint analysis and community mapping.',
     status: 'live' as const,
     url: 'https://www.barriosvisibles.org/es',
+    image: '/initiatives/barrios-visibles.png',
   },
   {
     slug: 'geospatial-python',
@@ -50,6 +52,7 @@ export function Initiatives() {
             body={init.body}
             status={init.status}
             url={'url' in init ? init.url : undefined}
+            image={'image' in init ? init.image : undefined}
             locale={locale}
           />
         ))}
@@ -64,6 +67,7 @@ interface InitiativeCardProps {
   body: string;
   status: 'live' | 'upcoming';
   url?: string;
+  image?: string;
   locale: string;
 }
 
@@ -73,6 +77,7 @@ function InitiativeCard({
   body,
   status,
   url,
+  image,
   locale,
 }: InitiativeCardProps) {
   const href = url || `/${locale}/initiatives#${slug}`;
@@ -84,8 +89,17 @@ function InitiativeCard({
       className="init-card"
       {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
     >
-      {/* Image placeholder */}
+      {/* Image or placeholder */}
       <div className="pic">
+        {image && (
+          <Image
+            src={image}
+            alt={title}
+            fill
+            sizes="(max-width: 768px) 100vw, 400px"
+            style={{ objectFit: 'cover' }}
+          />
+        )}
         <div className="corner">
           <span>Initiative</span>
           <span>Ongoing</span>
