@@ -173,6 +173,26 @@ p { margin: 0; }
 .topnav .btn.sun:hover { background: #ffc949; border-color: #ffc949; }
 
 /* ─── Lang tabs ─── */
+/* Nav CTA button (Get involved) */
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 14px;
+  background: var(--sun);
+  color: #1A1715;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  transition: background .15s;
+}
+.nav-cta:hover {
+  background: var(--sun-soft);
+}
+
 .lang-tabs {
   display: inline-flex;
   border: 1px solid rgba(241,234,215,0.25);

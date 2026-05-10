@@ -37,7 +37,7 @@ export function TopNav() {
 
         {/* Right: CTA, Lang, Mode */}
         <div className="right">
-          <Link href={`/${locale}#cta`} className="btn ink" data-desktop>
+          <Link href={`/${locale}#cta`} className="nav-cta" data-desktop>
             {t('getInvolved')}
           </Link>
           <LangToggle />
@@ -61,14 +61,14 @@ export function TopNav() {
         .row .links {
           display: none;
         }
-        .row .btn[data-desktop] {
+        .row :global(.nav-cta[data-desktop]) {
           display: none;
         }
         @media (min-width: 769px) {
           .row .links {
             display: flex !important;
           }
-          .row .btn[data-desktop] {
+          .row :global(.nav-cta[data-desktop]) {
             display: inline-flex !important;
           }
         }

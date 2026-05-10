@@ -12,7 +12,6 @@ export function Footer() {
         <span className="wm">
           human scale data<span className="dot">.</span>
         </span>
-        <p className="colophon">{t('colophon')}</p>
       </div>
 
       {/* Work column */}
