@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { getPilot, getNextPilot, getAllPilotSlugs } from '@/lib/pilots';
-import { getPilotAllImages, formatAttribution, licenseInfo } from '@/lib/pilot-gallery';
+import { getPilotAllImages, formatAttribution } from '@/lib/pilot-gallery';
 import { getPilotPress, getPilotVideos, getYouTubeEmbedUrl } from '@/lib/pilot-press';
 
 interface PageProps {
