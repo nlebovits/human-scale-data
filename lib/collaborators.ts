@@ -11,6 +11,7 @@ export interface Collaborator {
 export const collaborators: Collaborator[] = [
   {
     name: 'Radiant Earth',
+    logo: '/collaborators/radiant-earth.png',
     url: 'https://radiant.earth',
   },
   {
@@ -22,6 +23,11 @@ export const collaborators: Collaborator[] = [
     name: 'Source Cooperative',
     logo: '/collaborators/source-coop.svg',
     url: 'https://source.coop',
+  },
+  {
+    name: 'Cloud-Native Geo',
+    logo: '/collaborators/cng-icon.svg',
+    url: 'https://cloudnativegeo.org',
   },
   {
     name: 'CIUT · UNLP',
@@ -37,10 +43,6 @@ export const collaborators: Collaborator[] = [
     name: 'Municipalidad de Esperanza',
     logo: '/collaborators/esperanza.png',
     url: 'https://esperanza.gob.ar',
-  },
-  {
-    name: 'Cloud-Native Geo',
-    url: 'https://cloudnativegeo.org',
   },
   {
     name: 'CONICET',
