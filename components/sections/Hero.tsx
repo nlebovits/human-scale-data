@@ -50,7 +50,7 @@ export function Hero() {
               {t('body')}
             </p>
             <div className="ctas">
-              <Link href={`/${locale}#pilots`} className="btn cream">
+              <Link href={`/${locale}#pilots`} className="btn ink">
                 {t('ctaRead')} <span className="arrow">→</span>
               </Link>
               <Link href={`/${locale}#method`} className="btn ghost-light">

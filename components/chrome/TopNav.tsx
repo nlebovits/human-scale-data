@@ -37,7 +37,7 @@ export function TopNav() {
 
         {/* Right: CTA, Lang, Mode */}
         <div className="right">
-          <Link href={`/${locale}#cta`} className="btn sun" data-desktop>
+          <Link href={`/${locale}#cta`} className="btn ink" data-desktop>
             {t('getInvolved')}
           </Link>
           <LangToggle />
