@@ -248,38 +248,33 @@ p { margin: 0; }
 .hero-photo {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse at 70% 30%, rgba(242,184,56,0.35), transparent 55%),
-    radial-gradient(ellipse at 40% 80%, rgba(0,0,0,0.55), transparent 60%),
-    linear-gradient(180deg, #6a4f2c 0%, #3a2a1c 45%, #1a1410 100%);
 }
-@media (max-width: 768px) {
-  .hero-photo {
-    background:
-      radial-gradient(ellipse at 50% 35%, rgba(242,184,56,0.30), transparent 55%),
-      radial-gradient(ellipse at 80% 80%, rgba(179,58,111,0.32), transparent 60%),
-      linear-gradient(180deg, #3D2418 0%, #2A1A14 60%, #14110D 100%);
-  }
-}
+/* Warm color overlay to match design palette */
 .hero-photo::before {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 28%;
-  height: 1px;
-  background: rgba(242,184,56,0.4);
-  box-shadow: 0 -1px 0 rgba(255,255,255,0.06), 0 60px 80px -20px rgba(242,184,56,0.18);
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(26, 23, 21, 0.3) 0%,
+    rgba(26, 23, 21, 0.1) 40%,
+    rgba(242, 184, 56, 0.15) 100%
+  );
+  mix-blend-mode: multiply;
 }
+/* Film grain texture */
 .hero-photo::after {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 2;
   background-image:
-    repeating-linear-gradient(0deg, rgba(0,0,0,0.06) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(0deg, rgba(0,0,0,0.03) 0 1px, transparent 1px 3px),
     repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0 1px, transparent 1px 4px);
   mix-blend-mode: overlay;
-  opacity: 0.6;
+  opacity: 0.5;
+  pointer-events: none;
 }
 .hero-bleed::after {
   content: "";

@@ -78,14 +78,13 @@ export function formatAttribution(image: GalleryImage): string {
 export const pilotGalleries: Record<string, PilotGallery> = {
   pergamino: {
     hero: {
-      src: '/pilots/parana-floodplain.jpg',
-      alt: 'Paraná River floodplain in Northern Argentina, photographed from the International Space Station',
-      caption: 'The Paraná River floodplain near Pergamino, seen from the ISS',
-      author: 'NASA/ISS Expedition 27',
-      license: 'public-domain',
-      sourceUrl:
-        'https://commons.wikimedia.org/wiki/File:Paran%C3%A1_River_Floodplain,_Northern_Argentina.jpg',
-      date: '2011-04-09',
+      src: '/pilots/pergamino-sun-placeholder.jpg',
+      alt: 'Harsh sun over Buenos Aires building - placeholder for Pergamino heat study',
+      caption: 'Extreme heat in the Pampas region',
+      author: 'Diego Vasquez / Unsplash',
+      license: 'custom', // Unsplash License
+      licenseUrl: 'https://unsplash.com/license',
+      sourceUrl: 'https://unsplash.com/photos/keS2lpz422Y',
     },
     gallery: [
       {
@@ -97,6 +96,16 @@ export const pilotGalleries: Record<string, PilotGallery> = {
         sourceUrl:
           'https://commons.wikimedia.org/wiki/File:Argentina_geos5_202211.jpg',
         date: '2022-01-11',
+      },
+      {
+        src: '/pilots/parana-floodplain.jpg',
+        alt: 'Paraná River floodplain in Northern Argentina, photographed from the ISS',
+        caption: 'The Paraná River floodplain near Pergamino, seen from the ISS',
+        author: 'NASA/ISS Expedition 27',
+        license: 'public-domain',
+        sourceUrl:
+          'https://commons.wikimedia.org/wiki/File:Paran%C3%A1_River_Floodplain,_Northern_Argentina.jpg',
+        date: '2011-04-09',
       },
     ],
   },

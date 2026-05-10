@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
 
@@ -12,8 +13,17 @@ export function Hero() {
     <section className="hero">
       {/* Hero bleed area with background */}
       <div className="hero-bleed">
-        {/* Gradient background */}
-        <div className="hero-photo" />
+        {/* Background image */}
+        <div className="hero-photo">
+          <Image
+            src="/hero-belgrano.jpg"
+            alt="Sunset over Belgrano neighborhood in Buenos Aires"
+            fill
+            priority
+            sizes="100vw"
+            style={{ objectFit: 'cover' }}
+          />
+        </div>
 
         {/* Side tag (rotated) */}
         <div className="hero-sidetag">
