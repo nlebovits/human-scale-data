@@ -87,7 +87,18 @@ export const pilotGalleries: Record<string, PilotGallery> = {
         'https://commons.wikimedia.org/wiki/File:Paran%C3%A1_River_Floodplain,_Northern_Argentina.jpg',
       date: '2011-04-09',
     },
-    gallery: [],
+    gallery: [
+      {
+        src: '/pilots/argentina-heat-2022.jpg',
+        alt: 'Air temperature map of Argentina showing extreme heat event in January 2022',
+        caption: 'GEOS-5 model showing air temperatures during the January 2022 heat wave',
+        author: 'Lauren Dauphin / NASA Earth Observatory',
+        license: 'public-domain',
+        sourceUrl:
+          'https://commons.wikimedia.org/wiki/File:Argentina_geos5_202211.jpg',
+        date: '2022-01-11',
+      },
+    ],
   },
 
   'la-plata': {
