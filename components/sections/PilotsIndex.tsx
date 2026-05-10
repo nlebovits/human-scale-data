@@ -20,12 +20,12 @@ const pilots = [
   {
     slug: 'la-plata',
     index: '02 / 06',
-    location: 'la plata, ar · 2026',
+    location: 'la plata, ar · 2024–26',
     status: 'upcoming' as const,
     badge: 'in flight',
     title: 'When the river rises.',
-    subtitle: 'Pluvial flooding & basement risk',
-    partner: 'municipality',
+    subtitle: 'Pluvial flooding & informal settlement exposure',
+    partner: 'CIUT · UNLP · municipality',
   },
   {
     slug: 'villa-del-rosario',

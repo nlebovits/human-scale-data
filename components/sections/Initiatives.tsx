@@ -5,6 +5,13 @@ import Link from 'next/link';
 
 const initiatives = [
   {
+    slug: 'barrios-visibles',
+    title: 'Barrios Visibles',
+    body: 'Making informal settlements visible in official data through building footprint analysis and community mapping.',
+    status: 'live' as const,
+    url: 'https://www.barriosvisibles.org/es',
+  },
+  {
     slug: 'geospatial-python',
     title: 'Geospatial Python',
     body: 'Open-source curriculum for cloud-native geospatial analysis in Spanish and English.',
@@ -14,12 +21,6 @@ const initiatives = [
     slug: 'data-dialogues',
     title: 'Data Dialogues',
     body: 'Monthly conversations between local experts and global technologists.',
-    status: 'live' as const,
-  },
-  {
-    slug: 'community-sensors',
-    title: 'Community Sensors',
-    body: 'Low-cost environmental monitoring deployed and maintained by local partners.',
     status: 'upcoming' as const,
   },
 ];
@@ -42,7 +43,15 @@ export function Initiatives() {
       {/* Horizontal scroll / vertical on mobile */}
       <div className="init-scroll">
         {initiatives.map((init) => (
-          <InitiativeCard key={init.slug} {...init} locale={locale} />
+          <InitiativeCard
+            key={init.slug}
+            slug={init.slug}
+            title={init.title}
+            body={init.body}
+            status={init.status}
+            url={'url' in init ? init.url : undefined}
+            locale={locale}
+          />
         ))}
       </div>
     </section>
@@ -54,6 +63,7 @@ interface InitiativeCardProps {
   title: string;
   body: string;
   status: 'live' | 'upcoming';
+  url?: string;
   locale: string;
 }
 
@@ -62,10 +72,18 @@ function InitiativeCard({
   title,
   body,
   status,
+  url,
   locale,
 }: InitiativeCardProps) {
+  const href = url || `/${locale}/initiatives#${slug}`;
+  const isExternal = !!url;
+
   return (
-    <Link href={`/${locale}/initiatives#${slug}`} className="init-card">
+    <Link
+      href={href}
+      className="init-card"
+      {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+    >
       {/* Image placeholder */}
       <div className="pic">
         <div className="corner">
@@ -81,7 +99,7 @@ function InitiativeCard({
       <h4>{title}</h4>
       <p>{body}</p>
       <div className="crow">
-        <span>Learn more →</span>
+        <span>{isExternal ? 'Visit site →' : 'Learn more →'}</span>
       </div>
     </Link>
   );

@@ -51,9 +51,26 @@ export const pilotPress: Record<string, PressItem[]> = {
     },
   ],
 
-  // Add press for other pilots as coverage comes in:
-  // 'la-plata': [],
-  // 'villa-del-rosario': [],
+  'la-plata': [
+    {
+      title: 'CIUT Riesgo: Análisis de exposición poblacional a peligros de inundación',
+      outlet: 'CIUT-UNLP',
+      url: 'https://nlebovits.github.io/ciut-riesgo/renabap.html',
+      date: '2025-12-01',
+      language: 'es',
+      excerpt:
+        'Análisis detallado de la exposición de barrios populares al riesgo de inundación en el Partido de La Plata usando datos de huellas de edificaciones.',
+    },
+    {
+      title: 'Plan de Reducción del Riesgo de Inundaciones en la Región de La Plata',
+      outlet: 'SEDICI-UNLP',
+      url: 'https://sedici.unlp.edu.ar/handle/10915/165109',
+      date: '2019-01-01',
+      language: 'es',
+      excerpt:
+        'Metodología base del modelo hidrológico-hidráulico FLO-2D utilizado para generar los mapas de peligrosidad.',
+    },
+  ],
 };
 
 export const pilotVideos: Record<string, VideoItem[]> = {

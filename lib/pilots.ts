@@ -106,38 +106,48 @@ Federico Gazaba presented the methodology at the provincial "Decidir con datos" 
     status: 'upcoming',
     badge: 'in flight',
     title: 'When the river rises.',
-    subtitle: 'Pluvial flooding & basement risk',
-    partner: 'municipality',
-    partnerFull: 'Municipalidad de La Plata',
-    duration: 'January 2026 – December 2026',
+    subtitle: 'Pluvial flooding & informal settlement exposure',
+    partner: 'CIUT · UNLP · municipality',
+    partnerFull: 'Centro de Investigaciones Urbanas y Territoriales (CIUT), Facultad de Ingeniería Hídrica (UNLP), Municipalidad de La Plata',
+    duration: 'August 2024 – December 2026',
     datasets: [
-      'Copernicus DEM',
-      'Sentinel-1 SAR',
-      'Historical flood extents',
-      'Municipal drainage network',
+      'FLO-2D hydrological model outputs',
+      'Google-Microsoft-OSM Open Buildings',
+      'RENABAP informal settlement boundaries',
+      'Municipal cadastre',
+      'LiDAR-derived DEM',
     ],
 
-    challenge: `La Plata experienced catastrophic flooding in April 2013, killing over 80 people and displacing thousands. The city's grid layout, designed in the 1880s, didn't account for the streams that once crossed the site — many now channeled underground. When heavy rainfall overwhelms the drainage system, water follows the old stream paths through basements and ground floors.
+    challenge: `La Plata experienced catastrophic flooding in April 2013, killing over 89 people and displacing thousands. The city's grid layout, designed in the 1880s, didn't account for the streams that once crossed the site — many now channeled underground. When heavy rainfall overwhelms the drainage system, water follows the old stream paths through basements and ground floors.
 
-The municipality needs block-level flood risk data to guide building permits, basement construction regulations, and emergency evacuation planning.`,
+A critical challenge is understanding exposure in informal settlements (barrios populares). Official RENABAP data significantly underestimates the number of structures — our analysis found approximately 41,575 buildings missing from official records, representing 137,000–229,000 uncounted people. Traditional areal interpolation methods overestimate proportional exposure by assuming uniform population distribution.`,
 
-    approach: `Work begins in January 2026. The approach combines:
+    approach: `This project combines flood hazard modeling with building-level exposure analysis:
 
-- High-resolution elevation modeling from Copernicus DEM and municipal LiDAR
-- Historical flood extent mapping from Sentinel-1 SAR and crowdsourced reports
-- Hydrological modeling of the buried stream network
-- Integration with building footprints to estimate basement flood risk`,
+**Flood visualization**: Using GRASS GIS, we applied Chaikin smoothing to flood hazard polygons from the Facultad de Ingeniería Hídrica. The process converted vector data to 2.5m raster, added edge noise for natural boundaries, and applied six iterations of smoothing. An interactive web map allows comparison of original and smoothed data against municipal cadastre.
 
-    impact: `Project is in scoping phase. Expected outputs include:
+**Building-level exposure**: Rather than areal interpolation, we count individual building footprints within flood hazard zones. This reveals that 17,014 buildings in barrios populares (23.5% of total) are exposed to flood hazard under the maximum probable precipitation scenario — 6,112 in high-hazard zones and 10,902 in medium-hazard zones.
 
-- Block-level pluvial flood risk map
-- Basement flood vulnerability index
-- Recommended updates to building code for basement construction
-- Integration with municipal early warning system`,
+**Watershed analysis**: Cuenca Arroyo del Gato has highest exposure with 7,943 buildings at risk, followed by Cuenca Maldonado (3,316) and Cuenca Martín-Carnaval (1,096).`,
 
-    techNotes: `Technical approach under development. Will use open-source hydrological modeling tools (QGIS, WhiteboxTools) combined with satellite-derived flood extents.`,
+    impact: `The analysis demonstrates that building footprint data improves both precision and comprehensiveness of risk mapping in informal settlements:
 
-    citation: `Human Scale Data. (2026). Pluvial flooding and basement risk: La Plata, Argentina. [In progress]. https://human-scale-data.org/pilots/la-plata`,
+- Identified ~41,575 structures missing from official RENABAP records
+- Villa Montoro leads exposure with 669 buildings in high-hazard zones (21.7% of neighborhood)
+- Comparison of return periods shows PMP exposure can be 13x higher than 25-year return period — critical for relocation policy decisions
+- Interactive flood map deployed for municipal planning use
+- Methodology published as open-source Quarto book for replication`,
+
+    techNotes: `**Data pipeline**: GRASS GIS for polygon smoothing (Chaikin algorithm), Python/GeoPandas for spatial analysis, PMTiles for web mapping.
+
+**Key finding**: Traditional areal interpolation overestimates proportional exposure (26.3% vs 23.5%) while underestimating absolute numbers. Building-level analysis provides more reliable estimates for both.
+
+**Validation**: Building footprint methodology cross-validated against high-resolution satellite imagery in sample neighborhoods.`,
+
+    citation: `Lebovits, N., Etulaín, J.C., & Duarte, C. (2025). Building-level flood exposure analysis in informal settlements: La Plata, Argentina. CIUT-UNLP. https://nlebovits.github.io/ciut-riesgo/`,
+
+    repoUrl: 'https://github.com/nlebovits/ciut-riesgo',
+    dataUrl: 'https://github.com/nlebovits/ciut-inundaciones-mapeo/tree/main/public/data',
   },
 
   {
