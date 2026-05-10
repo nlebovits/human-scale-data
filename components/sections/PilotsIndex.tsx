@@ -2,7 +2,8 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
-import { PilotImage, pilotImages } from '@/components/ui/PilotImage';
+import { PilotImage } from '@/components/ui/PilotImage';
+import { getPilotHeroImage } from '@/lib/pilot-gallery';
 
 // Pilot data matching the prototype
 const pilots = [
@@ -27,14 +28,14 @@ const pilots = [
     partner: 'municipality · conicet',
   },
   {
-    slug: 'rosario',
+    slug: 'villa-del-rosario',
     index: '03 / 06',
-    location: 'rosario, ar · 2026',
+    location: 'villa del rosario, ar · 2026',
     status: 'upcoming' as const,
     badge: 'scoping',
-    title: 'Urban canopy in a dry season.',
-    subtitle: 'Tree cover & heat mitigation',
-    partner: 'municipality · UNR',
+    title: 'Fire risk in the Sierras.',
+    subtitle: 'Wildfire mapping & early warning',
+    partner: 'municipality · CONAE',
   },
   {
     slug: 'medellin',
@@ -124,7 +125,7 @@ function PilotCard({
   openLabel,
 }: PilotCardProps) {
   const isUpcoming = status === 'upcoming';
-  const image = pilotImages[slug];
+  const hasImage = !!getPilotHeroImage(slug);
 
   return (
     <Link
@@ -133,8 +134,8 @@ function PilotCard({
     >
       {/* Thumbnail with B&W to color effect */}
       <div className="thumb">
-        {image ? (
-          <PilotImage image={image} />
+        {hasImage ? (
+          <PilotImage slug={slug} />
         ) : (
           <>
             <div className="swatch-bw" />

@@ -1,14 +1,15 @@
 import Image from 'next/image';
-
-export interface PilotImageData {
-  src: string;
-  alt: string;
-  attribution?: string;
-  attributionUrl?: string;
-}
+import {
+  GalleryImage,
+  formatAttribution,
+  getPilotHeroImage,
+} from '@/lib/pilot-gallery';
 
 interface PilotImageProps {
-  image?: PilotImageData;
+  /** Pilot slug to look up image from gallery */
+  slug?: string;
+  /** Or provide image directly */
+  image?: GalleryImage;
   className?: string;
 }
 
@@ -18,18 +19,18 @@ interface PilotImageProps {
  *
  * Usage:
  * ```tsx
- * <PilotImage
- *   image={{
- *     src: '/pilots/la-plata-flooding.jpg',
- *     alt: 'Satellite view of flooding in La Plata, Argentina',
- *     attribution: 'NASA/ASTER',
- *     attributionUrl: 'https://commons.wikimedia.org/wiki/File:...'
- *   }}
- * />
+ * // By slug (looks up from pilot-gallery.ts)
+ * <PilotImage slug="la-plata" />
+ *
+ * // Or with direct image data
+ * <PilotImage image={galleryImage} />
  * ```
  */
-export function PilotImage({ image, className = '' }: PilotImageProps) {
-  if (!image) {
+export function PilotImage({ slug, image, className = '' }: PilotImageProps) {
+  // Look up image from gallery if slug provided
+  const resolvedImage = image || (slug ? getPilotHeroImage(slug) : undefined);
+
+  if (!resolvedImage) {
     // Gradient placeholder (matches original CSS)
     return (
       <div className={`pilot-image-placeholder ${className}`}>
@@ -39,13 +40,15 @@ export function PilotImage({ image, className = '' }: PilotImageProps) {
     );
   }
 
+  const attribution = formatAttribution(resolvedImage);
+
   return (
     <div className={`pilot-image ${className}`}>
       {/* B&W version */}
       <div className="swatch-bw">
         <Image
-          src={image.src}
-          alt={image.alt}
+          src={resolvedImage.src}
+          alt={resolvedImage.alt}
           fill
           sizes="(max-width: 768px) 100vw, 420px"
           style={{ objectFit: 'cover', filter: 'grayscale(1) contrast(1.1)' }}
@@ -54,44 +57,24 @@ export function PilotImage({ image, className = '' }: PilotImageProps) {
       {/* Color version (shown on hover) */}
       <div className="swatch-color">
         <Image
-          src={image.src}
-          alt={image.alt}
+          src={resolvedImage.src}
+          alt={resolvedImage.alt}
           fill
           sizes="(max-width: 768px) 100vw, 420px"
           style={{ objectFit: 'cover' }}
         />
       </div>
       {/* Attribution overlay - uses span to avoid nested <a> inside card link */}
-      {image.attribution && (
-        <span
-          className="pilot-image-attribution"
-          title={image.attributionUrl || undefined}
-        >
-          {image.attribution}
-        </span>
-      )}
+      <span
+        className="pilot-image-attribution"
+        title={resolvedImage.sourceUrl}
+      >
+        {attribution}
+      </span>
     </div>
   );
 }
 
-/**
- * Registry of pilot images.
- * Add new images here as they become available.
- */
-export const pilotImages: Record<string, PilotImageData> = {
-  'pergamino': {
-    src: '/pilots/parana-floodplain.jpg',
-    alt: 'Paraná River floodplain in Northern Argentina, photographed from the ISS',
-    attribution: 'NASA/ISS Expedition 27',
-    attributionUrl: 'https://commons.wikimedia.org/wiki/File:Paran%C3%A1_River_Floodplain,_Northern_Argentina.jpg',
-  },
-  'la-plata': {
-    src: '/pilots/la-plata-flooding.jpg',
-    alt: 'Satellite view of severe flooding in La Plata, Argentina from NASA ASTER',
-    attribution: 'NASA/ASTER',
-    attributionUrl: 'https://commons.wikimedia.org/wiki/File:NASA_Spacecraft_Eyes_Severe_Flooding_in_Argentina.jpg',
-  },
-  // Add more pilot images as they become available:
-  // 'rosario': { ... },
-  // 'medellin': { ... },
-};
+// Re-export for convenience
+export { getPilotHeroImage, getPilotAllImages } from '@/lib/pilot-gallery';
+export type { GalleryImage } from '@/lib/pilot-gallery';
