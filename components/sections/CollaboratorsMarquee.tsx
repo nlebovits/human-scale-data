@@ -1,22 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-
-// Collaborators from the reference prototype
-const collaborators = [
-  'Radiant Earth',
-  'RIL',
-  'Source Cooperative',
-  'Cloud-Native Geo',
-  'CONICET',
-  'Pergamino',
-  'UNL',
-  'Bezos Earth Fund',
-  'McGovern Foundation',
-  'Techo',
-  'INDEC',
-  'Microsoft Planetary',
-];
+import { collaborators } from '@/lib/collaborators';
 
 export function CollaboratorsMarquee() {
   const t = useTranslations('collaborators');
@@ -38,9 +24,43 @@ export function CollaboratorsMarquee() {
       {/* Marquee */}
       <div className="marquee">
         <div className="marquee-track">
-          {doubledCollabs.map((name, i) => (
+          {doubledCollabs.map((collab, i) => (
             <span key={i} style={{ display: 'contents' }}>
-              <span className="logo">{name}</span>
+              {collab.url ? (
+                <a
+                  href={collab.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="logo"
+                  title={collab.name}
+                >
+                  {collab.logo ? (
+                    <Image
+                      src={collab.logo}
+                      alt={collab.name}
+                      width={120}
+                      height={48}
+                      style={{ objectFit: 'contain', height: '48px', width: 'auto' }}
+                    />
+                  ) : (
+                    <span className="logo-text">{collab.name}</span>
+                  )}
+                </a>
+              ) : (
+                <span className="logo">
+                  {collab.logo ? (
+                    <Image
+                      src={collab.logo}
+                      alt={collab.name}
+                      width={120}
+                      height={48}
+                      style={{ objectFit: 'contain', height: '48px', width: 'auto' }}
+                    />
+                  ) : (
+                    <span className="logo-text">{collab.name}</span>
+                  )}
+                </span>
+              )}
               <span className="sep" />
             </span>
           ))}

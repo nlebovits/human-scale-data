@@ -1044,19 +1044,45 @@ p { margin: 0; }
 .marquee:hover .marquee-track { animation-play-state: paused; }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .marquee .logo {
-  font-family: var(--serif);
-  font-weight: 700;
-  font-size: 30px;
-  letter-spacing: -0.025em;
-  color: var(--ink-soft);
-  white-space: nowrap;
-  filter: grayscale(1);
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
   gap: 10px;
+  white-space: nowrap;
+  /* Grayscale + high contrast to make logos black */
+  filter: grayscale(1) contrast(0) brightness(0);
+  opacity: 0.6;
+  transition: filter 0.3s, opacity 0.3s;
+  text-decoration: none;
+}
+.dark .marquee .logo {
+  /* Invert to make logos white in dark mode */
+  filter: grayscale(1) contrast(0) brightness(0) invert(1);
+}
+.marquee .logo:hover {
+  filter: grayscale(1) contrast(0) brightness(0);
+  opacity: 1;
+}
+.dark .marquee .logo:hover {
+  filter: grayscale(1) contrast(0) brightness(0) invert(1);
+  opacity: 1;
+}
+.marquee .logo img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
 }
 @media (max-width: 768px) {
-  .marquee .logo { font-size: 22px; }
+  .marquee .logo img { height: 36px; }
+}
+.marquee .logo .logo-text {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: -0.025em;
+  color: var(--ink-soft);
+}
+@media (max-width: 768px) {
+  .marquee .logo .logo-text { font-size: 20px; }
 }
 .marquee .logo .sub {
   font-family: var(--mono);
