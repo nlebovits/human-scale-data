@@ -2,6 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
+import { PilotImage, pilotImages } from '@/components/ui/PilotImage';
 
 // Pilot data matching the prototype
 const pilots = [
@@ -123,6 +124,7 @@ function PilotCard({
   openLabel,
 }: PilotCardProps) {
   const isUpcoming = status === 'upcoming';
+  const image = pilotImages[slug];
 
   return (
     <Link
@@ -131,8 +133,14 @@ function PilotCard({
     >
       {/* Thumbnail with B&W to color effect */}
       <div className="thumb">
-        <div className="swatch-bw" />
-        <div className="swatch-color" />
+        {image ? (
+          <PilotImage image={image} />
+        ) : (
+          <>
+            <div className="swatch-bw" />
+            <div className="swatch-color" />
+          </>
+        )}
         {/* Corner labels */}
         <div className="corner">
           <span>{index}</span>
