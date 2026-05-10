@@ -44,8 +44,4 @@ export const collaborators: Collaborator[] = [
     logo: '/collaborators/esperanza.png',
     url: 'https://esperanza.gob.ar',
   },
-  {
-    name: 'CONICET',
-    url: 'https://www.conicet.gov.ar',
-  },
 ];

@@ -25,7 +25,7 @@ const pilots = [
     badge: 'in flight',
     title: 'When the river rises.',
     subtitle: 'Pluvial flooding & basement risk',
-    partner: 'municipality · conicet',
+    partner: 'municipality',
   },
   {
     slug: 'villa-del-rosario',

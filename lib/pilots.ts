@@ -107,8 +107,8 @@ Federico Gazaba presented the methodology at the provincial "Decidir con datos" 
     badge: 'in flight',
     title: 'When the river rises.',
     subtitle: 'Pluvial flooding & basement risk',
-    partner: 'municipality · conicet',
-    partnerFull: 'Municipalidad de La Plata, CONICET',
+    partner: 'municipality',
+    partnerFull: 'Municipalidad de La Plata',
     duration: 'January 2026 – December 2026',
     datasets: [
       'Copernicus DEM',
