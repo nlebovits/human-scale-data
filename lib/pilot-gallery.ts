@@ -78,15 +78,56 @@ export function formatAttribution(image: GalleryImage): string {
 export const pilotGalleries: Record<string, PilotGallery> = {
   pergamino: {
     hero: {
-      src: '/pilots/pergamino-sun-placeholder.jpg',
-      alt: 'Harsh sun over Buenos Aires building - placeholder for Pergamino heat study',
-      caption: 'Extreme heat in the Pampas region',
-      author: 'Diego Vasquez / Unsplash',
-      license: 'custom', // Unsplash License
-      licenseUrl: 'https://unsplash.com/license',
-      sourceUrl: 'https://unsplash.com/photos/keS2lpz422Y',
+      src: '/pilots/pergamino-fieldwork-1.jpg',
+      alt: 'Nissim Lebovits meeting with Pergamino municipal staff during field visit',
+      caption: 'Field visit with municipal environmental team, November 2025',
+      author: 'Municipalidad de Pergamino',
+      license: 'custom',
+      sourceUrl:
+        'https://pergaminoaldia.ar/pergamino-recibio-a-investigador-internacional-para-medir-riesgo-de-calor-extremo-en-la-ciudad/',
+      date: '2025-11-26',
     },
     gallery: [
+      {
+        src: '/pilots/pergamino-fieldwork-2.jpg',
+        alt: 'Temperature survey fieldwork in Pergamino neighborhoods',
+        caption: 'Conducting temperature surveys across different city sectors',
+        author: 'Municipalidad de Pergamino',
+        license: 'custom',
+        sourceUrl:
+          'https://pergaminoaldia.ar/pergamino-recibio-a-investigador-internacional-para-medir-riesgo-de-calor-extremo-en-la-ciudad/',
+        date: '2025-11-26',
+      },
+      {
+        src: '/pilots/pergamino-fieldwork-3.jpg',
+        alt: 'Technical meeting with Pergamino GIS and environmental staff',
+        caption: 'Technical meeting with Valeria Pereyra and Federico Gazaba',
+        author: 'Municipalidad de Pergamino',
+        license: 'custom',
+        sourceUrl:
+          'https://pergaminoaldia.ar/pergamino-recibio-a-investigador-internacional-para-medir-riesgo-de-calor-extremo-en-la-ciudad/',
+        date: '2025-11-25',
+      },
+      {
+        src: '/pilots/pergamino-webinar-presentation.jpg',
+        alt: 'Federico Gazaba presenting heat island research at provincial webinar',
+        caption: 'Presenting at "Decidir con datos" webinar series, December 2025',
+        author: 'INDEC Buenos Aires',
+        license: 'custom',
+        sourceUrl:
+          'https://pergaminoaldia.ar/el-municipio-participo-en-el-ciclo-de-webinarios-decidir-con-datos-gestion-local-basada-en-evidencia/',
+        date: '2025-12-11',
+      },
+      {
+        src: '/pilots/pergamino-webinar-screen.jpg',
+        alt: 'Screen showing heat island analysis presentation',
+        caption: 'Heat island analysis methodology shared with Buenos Aires municipalities',
+        author: 'INDEC Buenos Aires',
+        license: 'custom',
+        sourceUrl:
+          'https://pergaminoaldia.ar/el-municipio-participo-en-el-ciclo-de-webinarios-decidir-con-datos-gestion-local-basada-en-evidencia/',
+        date: '2025-12-11',
+      },
       {
         src: '/pilots/argentina-heat-2022.jpg',
         alt: 'Air temperature map of Argentina showing extreme heat event in January 2022',
